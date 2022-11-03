@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-// exporting schema for input fields/data required using mongoose.Schema method.
+// creating/exporting schema for input fields/data required using mongoose.Schema method.
 const userSchema = mongoose.Schema({
     name: {
         type: String,
@@ -14,6 +14,7 @@ const userSchema = mongoose.Schema({
     password: {
         type: String,
         required: [true, 'Please add a password'],
+        minlength: 8,
     },
     isAdmin: {
         type: Boolean,

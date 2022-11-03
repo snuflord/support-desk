@@ -1,7 +1,7 @@
 const asyncHandler = require('express-async-handler')
 // using bcrypt to encrypt user password
 const bcrypt = require('bcryptjs')
-// importing the userModel, which contains the scheme/fields required for sign up
+// importing the userModel, which contains the schema/fields required for sign up
 const User = require('../models/userModel')
 // json web token
 const jwt = require('jsonwebtoken')
