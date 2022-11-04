@@ -26,5 +26,5 @@ const userSchema = mongoose.Schema({
         timestamps: true,
     })
 
-// exports a mongoose model, the title of the model, and the userSchema object.
+// exports a mongoose model, the title of the model, and the userSchema object - sends to userController.
 module.exports = mongoose.model('User', userSchema)

@@ -6,7 +6,7 @@ const API_USER_URL = '/api/users/login'
 
 // Register User
 
-// async function takes in userdata as function parameter
+// async function takes in userdata as function parameter 
 const register = async (userData) => {
     // the response awaits a post request via axios (javascript library used to make http requests). It takes in the url, and then passes the user data entered by the user. 
     const response = await axios.post(API_URL, userData)

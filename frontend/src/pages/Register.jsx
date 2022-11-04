@@ -58,7 +58,7 @@ function Register() {
             email,
             password,
         }
-        // dispatch calls register function, taking in userData: the (user) function parameter in the register function. 
+        // dispatch calls register function, taking in userData: the (user) function parameter in the register function. userData has been updated in this file, and sent to register function in authService.
         dispatch(register(userData))
     }
    }

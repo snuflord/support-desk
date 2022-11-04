@@ -5,7 +5,7 @@ const {errorHandler} = require('../backend/middleware/errorMiddleware')
 const connectDB = require('./config/db')
 const PORT = process.env.PORT || 5000
 
-// Connect to database
+// Connect to database - method allows connection to our mongo database, from db.js
 connectDB()
 
 const app = express()

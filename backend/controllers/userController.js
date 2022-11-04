@@ -24,7 +24,7 @@ const generateToken = (id) => {
 // this function - registerUser is wrapped in asyncHandler
 const registerUser = asyncHandler(async (req, res) => {
 
-    // require name, email, password as the request body response
+    // require name, email, password as the request body response - this data is created by the user and sent via onSubmit in Register.
     const {name, email, password} = req.body
 
     // validation - if any of the fields are missing
@@ -104,6 +104,8 @@ const getMe = asyncHandler(async (req, res) => {
     res.status(200).json(user)
 })
 
+
+// These functions above are exported here and called in userRoues: on successful condition of user data present, the user will be routed to the relevant page.
 module.exports =  {
     registerUser,
     loginUser,

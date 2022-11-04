@@ -32,7 +32,7 @@ function Login() {
         if(isSuccess || user) {
             navigate('/')
         }
-        // reset reducer function imported from authSlice
+        // execute reset reducer function imported from authSlice
         dispatch(reset())
         }, [isError, isSuccess, user, message, navigate, dispatch])
 
@@ -51,6 +51,7 @@ function Login() {
         email,
         password
     }
+    // login function from authSlice
     dispatch(login(userData))
    }
 

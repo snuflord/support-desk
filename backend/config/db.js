@@ -12,4 +12,5 @@ const connectDB = async () => {
     }
 }
 
+// So now we have the connection to the mongo database parameters set up, we can export this method so that our requests can be made to it. Exported and called in server.js
 module.exports = connectDB

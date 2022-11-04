@@ -19,7 +19,7 @@ const initialState = {
 // exporting function so it can be imported in Register.jsx
 export const register = createAsyncThunk('auth/register', async (user, thunkAPI) => {
     try {
-        // data returned (payload)
+        // data returned (payload) - user is userData sent to authService(register) function via Register.jsx onSubmit
         return await authService.register(user)
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString
@@ -34,6 +34,7 @@ export const register = createAsyncThunk('auth/register', async (user, thunkAPI)
 // 'auth/login' is the url route created, which takes in the user object, and ...
 export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
     try {
+        // awaiting the logIn function from authService, which takes in user as function parameter. 
         return await authService.logIn(user)
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString
